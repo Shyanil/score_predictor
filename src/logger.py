@@ -2,7 +2,7 @@ import logging
 import os
 from datetime import datetime
 
-# Reset logging (fix for Jupyter/VSCode)
+
 for handler in logging.root.handlers[:]:
     logging.root.removeHandler(handler)
 
@@ -18,6 +18,5 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-if __name__ == "__main__":
-    logging.info("logging has started")
-    logging.shutdown()
+
+logger = logging.getLogger(__name__)
